@@ -1,3 +1,4 @@
+<?php
 add_shortcode( 'custom_discord_widget', function () {
 	
 	$data = file_get_contents('https://discord.com/api/guilds/793855822191001612/widget.json');
