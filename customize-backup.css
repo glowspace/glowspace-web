@@ -4,6 +4,12 @@ body {
 	line-height: 1.7;
 }
 
+@media (min-width: 600px) {
+	body {
+		padding: 0 70px;
+	}
+}
+
 h2 {
 	letter-spacing: 2px;
 }
@@ -28,7 +34,7 @@ h2 {
   100% {opacity: 1;}
 }
 
-h2:last-of-type, p, .wp-block-buttons, .header-image {
+.home h2:last-of-type, .home p, .home .wp-block-buttons, .home .header-image, .home iframe, .home .discord-widget {
 	animation-name: fadein;
 	animation-duration: 3.5s;
 }
@@ -37,33 +43,49 @@ h2:last-of-type, p, .wp-block-buttons, .header-image {
 	color: #ccc;
 }
 
-h2:last-of-type {
+.home h2:last-of-type {
 	animation-duration: 1s;
 }
 
-p:nth-of-type(1) {
+.home p:nth-of-type(1) {
 	animation-duration: 2s;
 	margin-top: 2em;
 }
 
-
-p:nth-of-type(2) {
+.home p:nth-of-type(2) {
 	animation-duration: 2.5s;
 }
 
-.wp-block-buttons {
+.home .wp-block-buttons {
 	margin-top: 3em;
 	animation-duration: 3s;
 }
 
-a {
-	transition: filter 1s;
+.home iframe {
+	animation-duration: 3s;
+}
+
+a, .td-u {
+	transition: filter 1s, color 0.2s;
+	text-decoration: underline;
+}
+
+.td-none, a:hover .td-u {
+	text-decoration: none;
 }
 
 a:focus {
 	outline: 1px dotted;
 }
 
-a:focus, a:hover {
+.site-logo a:focus, .site-logo a:hover, .wp-block-buttons a:focus, .wp-block-buttons a:hover {
 	filter: hue-rotate(330deg);
+}
+
+.separate-containers .site-main {
+	margin-bottom: 50px;
+}
+
+.separate-containers .inside-article {
+	padding-top: 0;
 }
